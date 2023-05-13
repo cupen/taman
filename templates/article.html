@@ -15,9 +15,9 @@
 
 {% block content %}
   <p class="meta">
-    {{ article.date|strftime('%d %B %Y') }}
+    {{ article.date|strftime(DEFAULT_DATE_FORMAT) }}
     <a href="/">
-      <i class="home fa fa-home"></i>
+      <i class="home fa fa-home fa-lg"></i>
     </a>
   </p>
 
@@ -28,10 +28,9 @@
   </div>
 
   <div class="article_meta related">
+    {% if article.tags %}
     <h3>Category: </h3>
     <span><a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</span>
-
-    {% if article.tags %}
     <h3>Tags:</h3>
     <span>
       {% for tag in article.tags %}
@@ -40,5 +39,4 @@
     </span>
     {% endif %}
   </div>
-
 {% endblock %}

@@ -14,3 +14,34 @@
 #home h2 {
     color: #181818;
 }
+
+
+ul.posts li {
+    margin-bottom: 5px;
+}
+
+.posts li .date {
+    display: inline-block;
+    font-size: 80%;
+    color: darkgray;
+}
+
+#post img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#post a {
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+#post p {
+    font-family: "Hiragino Sans GB", "Microsoft Yahei", Helvetica, "Helvetica Neue", "微软雅黑", Tahoma, Arial, sans-serif
+}
+
+@media screen and (max-device-width: 500px) {
+    #tags {
+        display: none;
+    }
+}
